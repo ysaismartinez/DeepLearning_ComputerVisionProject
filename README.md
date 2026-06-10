@@ -1,6 +1,6 @@
 # PetVision Backend
 
-PetVision is a backend Python implementation of a shelter intake computer vision app. It classifies animal images into **Dog**, **Cat**, or **Other** and returns confidence scores so low-confidence predictions can be routed to human review.
+PetVision is a backend Python implementation of a shelter intake computer vision app. It classifies animal images into **Dog**, **Cat**, or **Other** and returns confidence scores so low-confidence predictions can be routed to human review. For my commits to GitHub I only committed a small dataset as Terminal would crash if trying to upload all 11K+ images. My intention with this is to demonstrate the modesl being used, training, and having a live API call to test things. 
 
 This repository follows the required project structure and includes all three required modeling approaches:
 
