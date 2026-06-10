@@ -64,7 +64,7 @@ pip3 install -r requirements.txt
 ## Prepare Data
 
 ```bash
-python3 scripts/make_dataset.py
+python3 -m scripts.make_dataset
 ```
 
 This creates:
@@ -86,13 +86,13 @@ path,label
 Train the naive baseline and classical HOG + Random Forest model:
 
 ```bash
-python3 scripts/train.py
+python3 -m scripts.train
 ```
 
 Train MobileNetV2 separately, because it is slower and may require GPU time:
 
 ```bash
-python3 scripts/train_deep.py
+python3 -m scripts.train_deep
 ```
 
 Generated model artifacts are saved in `models/`. Metrics are saved in `data/outputs/`.
@@ -102,7 +102,7 @@ Generated model artifacts are saved in `models/`. Metrics are saved in `data/out
 After training MobileNetV2:
 
 ```bash
-python3 scripts/experiment.py
+python3 -m scripts.experiment
 ```
 
 This evaluates the trained deep learning model under brightness factors of `1.0`, `0.8`, `0.6`, and `0.4`, matching the lighting robustness experiment described in the report.
