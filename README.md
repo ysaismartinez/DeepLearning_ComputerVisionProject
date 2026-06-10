@@ -139,19 +139,3 @@ Example response:
   }
 }
 ```
-
-## Modeling Summary
-
-The report compares a progressive sequence of models:
-
-| Model | Purpose |
-|---|---|
-| Majority baseline | Establishes a minimum performance floor |
-| HOG + Random Forest | Classical non-deep-learning comparison |
-| MobileNetV2 | Final recommended deployable model |
-
-The deployed backend wrapper currently points to the HOG + Random Forest artifact by default because it is lightweight and fully local. The MobileNetV2 code is included for final training and evaluation, and the API can be extended to load the `.pt` artifact for production deployment.
-
-## Human Review Logic
-
-Predictions below `0.80` confidence are flagged for staff review. This mirrors the report recommendation that PetVision should assist shelter staff rather than act as a fully autonomous decision-maker.
