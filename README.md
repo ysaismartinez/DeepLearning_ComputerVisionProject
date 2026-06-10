@@ -14,6 +14,8 @@ It also includes the required focused experiment: **robustness to lighting varia
 
 ```text
 petvision_backend/
+├──Supporting Screenshots Showing PR and Training/
+│   ├── Supporting Screenshots.docx
 ├── README.md
 ├── requirements.txt
 ├── setup.py
