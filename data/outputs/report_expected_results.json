@@ -1,0 +1,14 @@
+{
+  "source": "PetVision technical report, June 2026",
+  "model_comparison": {
+    "Naive Baseline": {"accuracy": 0.400, "macro_f1": 0.190, "dog_f1": 0.571, "cat_f1": 0.000, "other_f1": 0.000},
+    "HOG + Random Forest": {"accuracy": 0.783, "macro_f1": 0.774, "dog_f1": 0.821, "cat_f1": 0.762, "other_f1": 0.738},
+    "MobileNetV2": {"accuracy": 0.951, "macro_f1": 0.949, "dog_f1": 0.967, "cat_f1": 0.941, "other_f1": 0.938}
+  },
+  "lighting_robustness_expected": {
+    "1.0": {"macro_f1": 0.949, "accuracy": 0.951},
+    "0.8": {"macro_f1": 0.927, "accuracy": 0.934},
+    "0.6": {"macro_f1": 0.901, "accuracy": 0.908},
+    "0.4": {"macro_f1": 0.843, "accuracy": 0.857}
+  }
+}
