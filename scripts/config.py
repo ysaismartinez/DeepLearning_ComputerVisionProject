@@ -13,7 +13,7 @@ PROCESSED_DIR = DATA_DIR / "processed"
 OUTPUT_DIR = DATA_DIR / "outputs"
 MODEL_DIR = PROJECT_ROOT / "models"
 
-CLASS_NAMES = ["Dog", "Cat", "Other"]
+CLASS_NAMES = ["Cat", "Dog", "Other"]
 IMAGE_SIZE = 224
 RANDOM_SEED = 42
 CONFIDENCE_REVIEW_THRESHOLD = 0.80
