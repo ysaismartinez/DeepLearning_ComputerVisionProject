@@ -54,15 +54,15 @@ data/raw/Other/
 ## Setup
 
 ```bash
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ## Prepare Data
 
 ```bash
-python scripts/make_dataset.py
+python3 scripts/make_dataset.py
 ```
 
 This creates:
@@ -84,13 +84,13 @@ path,label
 Train the naive baseline and classical HOG + Random Forest model:
 
 ```bash
-python scripts/train.py
+python3 scripts/train.py
 ```
 
 Train MobileNetV2 separately, because it is slower and may require GPU time:
 
 ```bash
-python scripts/train_deep.py
+python3 scripts/train_deep.py
 ```
 
 Generated model artifacts are saved in `models/`. Metrics are saved in `data/outputs/`.
@@ -100,7 +100,7 @@ Generated model artifacts are saved in `models/`. Metrics are saved in `data/out
 After training MobileNetV2:
 
 ```bash
-python scripts/experiment.py
+python3 scripts/experiment.py
 ```
 
 This evaluates the trained deep learning model under brightness factors of `1.0`, `0.8`, `0.6`, and `0.4`, matching the lighting robustness experiment described in the report.
@@ -118,6 +118,7 @@ curl http://127.0.0.1:8000/health
 ```
 
 Prediction endpoint:
+You must be in the folder for a certain animal. For example if you are running this from Terminal and you are passing a cat jpg, you must be in the Cat folder. 
 
 ```bash
 curl -X POST "http://127.0.0.1:8000/predict" \
