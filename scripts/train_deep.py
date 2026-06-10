@@ -96,8 +96,13 @@ def evaluate_model(model: nn.Module, loader: DataLoader, device: torch.device) -
         "accuracy": float(accuracy_score(y_true, y_pred)),
         "macro_f1": float(f1_score(y_true, y_pred, average="macro")),
         "classification_report": classification_report(
-            y_true, y_pred, target_names=CLASS_NAMES, output_dict=True, zero_division=0
-        ),
+                                    y_true,
+                                    y_pred,
+                                    labels=list(range(len(CLASS_NAMES))),
+                                    target_names=CLASS_NAMES,
+                                    output_dict=True,
+                                    zero_division=0,
+                                ),
         "confusion_matrix": confusion_matrix(y_true, y_pred).tolist(),
     }
 
